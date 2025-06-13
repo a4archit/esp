@@ -4,6 +4,7 @@
 ## dependencies
 from fastapi import FastAPI, Depends
 from fastapi.responses import JSONResponse
+from mangum import Mangum 
 
 from typing import Annotated, Dict
 from model.ESP import predict_exam_score, VERSION, NAME
@@ -97,6 +98,9 @@ def predict(user_input_data: Annotated[StudentInputDetails, Depends()]) -> JSONR
 
 
 
+
+
+handler = Mangum(app)
 
 
 
