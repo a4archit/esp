@@ -30,10 +30,9 @@ VERSION = '1.0.0'
 
 
 
-
 ## importing some useful files
-scaler = pickle.load(open('/home/archit-elitebook/workarea/whole working/esp/model/scaler.pkl','rb'))
-knn = pickle.load(open('/home/archit-elitebook/workarea/whole working/esp/model/model.pkl','rb'))
+scaler = pickle.load(open('/workspaces/esp/model/scaler.pkl','rb'))
+knn = pickle.load(open('/workspaces/esp/model/model.pkl','rb'))
 
 
 
