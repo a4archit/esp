@@ -15,6 +15,7 @@
 ## dependencies
 import pickle
 import pandas as pd
+import os
 
 from typing import Dict, Annotated
 
@@ -30,9 +31,18 @@ VERSION = '1.0.0'
 
 
 
-## importing some useful files
-scaler = pickle.load(open('/workspaces/esp/model/scaler.pkl','rb'))
-knn = pickle.load(open('/workspaces/esp/model/model.pkl','rb'))
+## importing some useful files ------------------------------------------------------------------ #
+
+## getting current working directory
+current_dir: str = os.getcwd()
+
+## updating files path 
+scaler_path = os.path.join(current_dir, 'model/scaler.pkl')
+model_path = os.path.join(current_dir, 'model/model.pkl')
+
+## loading models
+scaler = pickle.load(open(scaler_path,'rb'))
+knn = pickle.load(open(model_path,'rb'))
 
 
 
