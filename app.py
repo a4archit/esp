@@ -91,7 +91,11 @@ def api() -> jsonify:
         data: Dict[str,str] = {
             'status': "success",
             'details': f"welcome in {MODEL_NAME} ({MODEL_VERSION}) ",
-            'queries details': "valid queries are 'sh', 'ef' and 'mhr' "
+            'queries details': {
+                'sh': 'study hours [float]',
+                'ef': 'exercise frequency [integer]',
+                'mhr': 'mental health rating (0-10)[integer]',
+            }
         }
         return jsonify(data)
 
