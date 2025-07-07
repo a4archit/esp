@@ -89,8 +89,9 @@ def api() -> jsonify:
 
     except TypeError:
         data: Dict[str,str] = {
-            'msg': "Invalid query!",
-            'details': "valid queries are 'sh', 'ef' and 'mhr' "
+            'status': "success",
+            'details': f"welcome in {MODEL_NAME} ({MODEL_VERSION}) ",
+            'queries details': "valid queries are 'sh', 'ef' and 'mhr' "
         }
         return jsonify(data)
 
@@ -105,6 +106,12 @@ def api() -> jsonify:
 
     ## managing data for return
     data: Dict[str, str | float] = {
+        'status': 'success',
+        'status code': 200,
+        'model details': {
+            'name': MODEL_NAME,
+            'version': MODEL_VERSION
+        },
         'predicted exam score': exam_score,
         'input details': {
             'study hrs': study_hrs,
