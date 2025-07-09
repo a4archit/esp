@@ -9,12 +9,14 @@ any deploy platform for this.
 
 ## Technologies 
 - Scikit Learn
-- FastAPI
+- Flask
 - Python
 - Kaggle
 - Git & GitHub
 - *and more*
 
+## Deployment Platform
+I use Render to deploy it.
 
 # How it works?
 ## Step 1) Run this on your local machine 
