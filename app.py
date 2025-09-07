@@ -124,7 +124,7 @@ def api() -> jsonify:
         }
     }
 
-    return jsonify(data)
+    return jsonify(data) # returning data
 
 
 
